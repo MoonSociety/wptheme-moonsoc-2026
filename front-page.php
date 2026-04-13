@@ -17,7 +17,7 @@ get_header();
         <?php esc_html_e("NASA's Ignition initiative commits $20 billion to a permanent lunar base. The Moon Society has championed this vision for over 25 years. This is the moment.", 'moonsociety'); ?>
       </p>
       <div class="hero-actions">
-        <a href="https://moonsociety.wildapricot.org/join" class="btn btn-primary" target="_blank" rel="noopener">
+        <a href="<?php echo esc_url(home_url('/get-involved/join/')); ?>" class="btn btn-primary">
           <?php esc_html_e('Join the Moon Society', 'moonsociety'); ?>
         </a>
         <a href="https://ldc.moonsociety.org" class="btn btn-secondary" target="_blank" rel="noopener">
@@ -140,7 +140,7 @@ get_header();
             <?php esc_html_e('Join the community that has been making the case for a permanent human presence on the Moon since 2000.', 'moonsociety'); ?>
           </p>
           <div style="margin-top: var(--space-4);">
-            <a href="https://moonsociety.wildapricot.org/join" class="btn btn-primary" target="_blank" rel="noopener"><?php esc_html_e('Join', 'moonsociety'); ?></a>
+            <a href="<?php echo esc_url(home_url('/get-involved/join/')); ?>" class="btn btn-primary"><?php esc_html_e('Join', 'moonsociety'); ?></a>
           </div>
         </div>
       </div>

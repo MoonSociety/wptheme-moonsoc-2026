@@ -65,6 +65,29 @@ function moonsociety_enqueue_styles() {
 add_action('wp_enqueue_scripts', 'moonsociety_enqueue_styles', 20);
 
 /**
+ * Enqueue WildApricot widget assets on membership/donate pages only.
+ */
+function moonsociety_enqueue_wa_widget_assets() {
+    if (is_page_template('page-templates/template-membership.php')
+        || is_page_template('page-templates/template-donate.php')) {
+        wp_enqueue_style(
+            'moonsociety-wa-widgets',
+            get_stylesheet_directory_uri() . '/assets/css/wa-widgets.css',
+            ['moonsociety-style'],
+            wp_get_theme()->get('Version')
+        );
+        wp_enqueue_script(
+            'moonsociety-wa-fallback',
+            get_stylesheet_directory_uri() . '/assets/js/wa-widget-fallback.js',
+            [],
+            wp_get_theme()->get('Version'),
+            true
+        );
+    }
+}
+add_action('wp_enqueue_scripts', 'moonsociety_enqueue_wa_widget_assets', 25);
+
+/**
  * Enqueue editor styles so the block editor matches the frontend.
  */
 function moonsociety_editor_styles() {

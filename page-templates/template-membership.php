@@ -3,7 +3,7 @@
  * Template Name: Membership
  * Template Post Type: page
  *
- * Membership page linking to WildApricot for sign-up.
+ * Membership page with embedded WildApricot membership application widget.
  *
  * @package MoonSociety
  */
@@ -19,10 +19,10 @@ get_header();
         <?php esc_html_e('Be part of the organization that has advocated for a permanent human presence on the Moon for over 25 years.', 'moonsociety'); ?>
       </p>
       <div class="hero-actions">
-        <a href="https://moonsociety.wildapricot.org/join" class="btn btn-primary" target="_blank" rel="noopener">
-          <?php esc_html_e('Join Now', 'moonsociety'); ?>
+        <a href="#membership-widget" class="btn btn-primary">
+          <?php esc_html_e('Apply Now', 'moonsociety'); ?>
         </a>
-        <a href="https://moonsociety.wildapricot.org/Sys/Login" class="btn btn-secondary" target="_blank" rel="noopener">
+        <a href="https://join.moonsociety.org/Sys/Login" class="btn btn-secondary" target="_blank" rel="noopener">
           <?php esc_html_e('Members Login', 'moonsociety'); ?>
         </a>
       </div>
@@ -67,7 +67,47 @@ get_header();
   </div>
 </section>
 
-<section class="section section-dark">
+<section id="membership-widget" class="section section-dark wa-widget-section">
+  <div class="site-container">
+    <div class="section-header">
+      <h2><?php esc_html_e('Apply for Membership', 'moonsociety'); ?></h2>
+      <p class="section-subtitle">
+        <?php esc_html_e('Choose your membership tier and complete the application below.', 'moonsociety'); ?>
+      </p>
+    </div>
+
+    <noscript>
+      <div class="wa-widget-noscript">
+        <p><?php esc_html_e('The membership application requires JavaScript. Please enable JavaScript or apply directly on WildApricot.', 'moonsociety'); ?></p>
+        <a href="https://join.moonsociety.org" class="btn btn-primary" target="_blank" rel="noopener">
+          <?php esc_html_e('Join on WildApricot', 'moonsociety'); ?>
+        </a>
+      </div>
+    </noscript>
+
+    <div class="wa-widget-frame">
+      <iframe
+        src="https://join.moonsociety.org/widget/"
+        title="<?php esc_attr_e('Moon Society Membership Application', 'moonsociety'); ?>"
+        onload="tryToEnableWACookies('https://join.moonsociety.org');"
+        frameborder="no"
+        loading="lazy">
+      </iframe>
+    </div>
+    <script src="https://join.moonsociety.org/Common/EnableCookies.js"></script>
+
+    <div class="wa-widget-fallback" aria-live="polite">
+      <p>
+        <?php esc_html_e('Having trouble with the form above?', 'moonsociety'); ?>
+        <a href="https://join.moonsociety.org" target="_blank" rel="noopener">
+          <?php esc_html_e('Complete your membership on WildApricot directly', 'moonsociety'); ?>
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-darker">
   <div class="site-container">
     <div class="cta-banner">
       <h2><?php esc_html_e('This Is the Moment', 'moonsociety'); ?></h2>
@@ -75,8 +115,8 @@ get_header();
         <?php esc_html_e("NASA's Ignition initiative has made a permanent lunar base official policy. The Moon Society has been preparing for this moment since 2000. Join us.", 'moonsociety'); ?>
       </p>
       <div class="hero-actions" style="justify-content: center;">
-        <a href="https://moonsociety.wildapricot.org/join" class="btn btn-primary" target="_blank" rel="noopener">
-          <?php esc_html_e('Become a Member', 'moonsociety'); ?>
+        <a href="#membership-widget" class="btn btn-primary">
+          <?php esc_html_e('Apply Now', 'moonsociety'); ?>
         </a>
       </div>
     </div>

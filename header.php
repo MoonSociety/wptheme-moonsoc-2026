@@ -35,7 +35,7 @@
       ?>
     </nav>
 
-    <a href="<?php echo esc_url('https://moonsociety.wildapricot.org/join'); ?>" class="btn btn-primary header-cta" target="_blank" rel="noopener">
+    <a href="<?php echo esc_url(home_url('/get-involved/join/')); ?>" class="btn btn-primary header-cta">
       <?php esc_html_e('Join Us', 'moonsociety'); ?>
     </a>
 
@@ -62,7 +62,7 @@
   ]);
   ?>
   <div style="margin-top: var(--space-5);">
-    <a href="<?php echo esc_url('https://moonsociety.wildapricot.org/join'); ?>" class="btn btn-primary" target="_blank" rel="noopener" style="width: 100%; text-align: center;">
+    <a href="<?php echo esc_url(home_url('/get-involved/join/')); ?>" class="btn btn-primary" style="width: 100%; text-align: center;">
       <?php esc_html_e('Join Us', 'moonsociety'); ?>
     </a>
   </div>
